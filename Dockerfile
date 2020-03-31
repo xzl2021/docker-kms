@@ -3,6 +3,8 @@
 # Reference URL:
 # https://github.com/Wind4/vlmcsd
 
+LABEL maintainer="xzl2021 <xzl2021#hotmail.com>"
+
 FROM alpine:latest AS builder
 WORKDIR /root
 RUN apk add --no-cache git make build-base && \
@@ -11,8 +13,7 @@ RUN apk add --no-cache git make build-base && \
     make
 
 FROM alpine:latest
-LABEL maintainer="Teddysun <i@teddysun.com>"
-
 COPY --from=builder /root/vlmcsd/bin/vlmcsd /usr/bin/vlmcsd
+
 EXPOSE 1688
 CMD [ "vlmcsd", "-D" ]
