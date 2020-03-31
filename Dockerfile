@@ -3,7 +3,7 @@
 # Reference URL:
 # https://github.com/Wind4/vlmcsd
 
-LABEL maintainer="xzl2021 <xzl2021#hotmail.com>"
+LABEL maintainer="Teddysun <i@teddysun.com>, xzl2021 <xzl2021#hotmail.com>"
 
 FROM alpine:latest AS builder
 WORKDIR /root
