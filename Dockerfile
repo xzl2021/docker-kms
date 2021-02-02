@@ -1,3 +1,4 @@
+FROM alpine:latest AS builder
 # Dockerfile for KMS Server
 # Copyright (C) 2018 - 2020 Teddysun <i@teddysun.com>
 # Reference URL:
@@ -5,7 +6,6 @@
 
 LABEL maintainer="Teddysun <i@teddysun.com>, xzl2021 <xzl2021#hotmail.com>"
 
-FROM alpine:latest AS builder
 WORKDIR /root
 RUN apk add --no-cache git make build-base && \
     git clone --branch master --single-branch https://github.com/Wind4/vlmcsd.git && \
