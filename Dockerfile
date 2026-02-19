@@ -15,4 +15,4 @@ RUN cd /tmp \
     && rm -rf /tmp/*
 
 EXPOSE 1688
-CMD [ "vlmcsd", "-D" ]
+CMD [ "vlmcsd", "-D", "-e", "-v" ]
